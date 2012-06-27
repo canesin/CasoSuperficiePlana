@@ -1,0 +1,65 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.1.x-223b594ad0ff
+Exec   : blockMesh
+Date   : Jun 01 2012
+Time   : 16:25:34
+Host   : "jaime"
+PID    : 14523
+Case   : /home/canesin/Dropbox/SprayCooling/sup_plana_agua
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Disallowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/home/canesin/Dropbox/SprayCooling/sup_plana_agua/constant/polyMesh/blockMeshDict"
+Creating curved edges
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 0.001
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (0.025 0.017 0.025)
+  nPoints: 24986
+  nCells: 22500
+  nFaces: 69900
+  nInternalFaces: 65100
+----------------
+Patches
+----------------
+  patch 0 (start: 65100 size: 900) name: top
+  patch 1 (start: 66000 size: 3000) name: sides
+  patch 2 (start: 69000 size: 900) name: film
+
+End
+

@@ -1,0 +1,83 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.1.x-223b594ad0ff
+Exec   : extrudeToRegionMesh -overwrite
+Date   : Jun 01 2012
+Time   : 16:27:34
+Host   : "jaime"
+PID    : 14528
+Case   : /home/canesin/Dropbox/SprayCooling/sup_plana_agua
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Disallowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting extrudeModel linearNormal
+Extruding zones 
+1
+(
+wallFilmFaces
+)
+ on mesh region0 into shell mesh wallFilmRegion
+Testing:"/home/canesin/Dropbox/SprayCooling/sup_plana_agua/system/wallFilmRegion/fvSchemes"
+Writing meshes to constant
+
+Zone wallFilmFaces has boundary faces
+extrudePatch : faces:2828 points:2877 edges:5704
+
+Adding coupling patches:
+
+patchID	patch	type
+-------	-----	----
+4	wallFilmFaces_top	patch
+5	region0_to_wallFilmRegion_wallFilmFaces	mappedWall
+Added 2 inter-region patches.
+
+Adding coupling patches:
+
+patchID	patch	type
+-------	-----	----
+4	wallFilmFaces_top	patch
+5	region0_to_wallFilmRegion_wallFilmFaces	mappedWall
+Added 2 inter-region patches.
+
+Adding patches for sides on zones:
+
+patchID	patch
+-------	-----
+Added 0 zone-side patches.
+
+Adding inter-zone patches:
+
+patchID	patch
+-------	-----
+Added 0 inter-zone patches.
+
+Adding processor or cyclic patches:
+
+patchID	patch
+-------	-----
+Added 0 coupled patches.
+
+Deleting patch 0 name:top
+Deleting patch 1 name:sides
+Deleting patch 2 name:film
+Writing mesh wallFilmRegion to "constant"
+
+Deleting patch 1 name:sides
+Deleting patch 2 name:film
+Deleting patch 4 name:wallFilmFaces_top
+Writing mesh region0 to "constant"
+
+End
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+cp -rf 0.org 0
+runApplication blockMesh
+#runApplication setSet -batch wallFilmRegion.setSet
+#mv log.setSet log.wallFilmRegion.setSet
+runApplication surfaceFeatureExtract -includedAngle 150 -writeObj constant/triSurface/dominio.stl dominio
+runApplication snappyHexMesh -overwrite
+runApplication topoSet
+runApplication extrudeToRegionMesh -overwrite
+
+paraFoam -touch -region wallFilmRegion
+paraFoam -touch -region region0

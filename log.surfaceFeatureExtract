@@ -1,0 +1,68 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.1.x-223b594ad0ff
+Exec   : surfaceFeatureExtract -includedAngle 150 -writeObj constant/triSurface/dominio.stl dominio
+Date   : Jun 01 2012
+Time   : 16:25:35
+Host   : "jaime"
+PID    : 14524
+Case   : /home/canesin/Dropbox/SprayCooling/sup_plana_agua
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Disallowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Feature line extraction is only valid on closed manifold surfaces.
+Surface            : "constant/triSurface/dominio.stl"
+Output feature set : "dominio"
+
+Statistics:
+Triangles    : 556
+Vertices     : 280
+Bounding Box : (0 -0.008500000462 0) (0.02500000037 0.02549999952 0.02500000037)
+
+Constructing feature set from included angle 150
+
+Initial feature set:
+    feature points : 0
+    feature edges  : 280
+    of which
+        region edges   : 0
+        external edges : 280
+        internal edges : 0
+
+
+Final feature set:
+    feature points : 0
+    feature edges  : 280
+    of which
+        region edges   : 0
+        external edges : 280
+        internal edges : 0
+
+
+Writing extendedFeatureEdgeMesh to "/home/canesin/Dropbox/SprayCooling/sup_plana_agua/constant/extendedFeatureEdgeMesh/dominio.extendedFeatureEdgeMesh"
+
+Writing extendedFeatureEdgeMesh components to "dominio"
+Writing convex feature points to "dominio_convexFeaturePts.obj"
+Writing concave feature points to "dominio_concaveFeaturePts.obj"
+Writing mixed feature points to "dominio_mixedFeaturePts.obj"
+Writing mixed feature point structure to "dominio_mixedFeaturePtsStructure.obj"
+Writing external edges to "dominio_externalEdges.obj"
+Writing internal edges to "dominio_internalEdges.obj"
+Writing flat edges to "dominio_flatEdges.obj"
+Writing open edges to "dominio_openEdges.obj"
+Writing multiple edges to "dominio_multipleEdges.obj"
+Writing region edges to "dominio_regionEdges.obj"
+
+Writing featureEdgeMesh to "/home/canesin/Dropbox/SprayCooling/sup_plana_agua/constant/triSurface/dominio.eMesh"
+End
+
